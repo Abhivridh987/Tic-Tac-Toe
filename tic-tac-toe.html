@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tic-tac-toe.css">
+    <script src="https://kit.fontawesome.com/0e66e07bd2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="title"><h1>Tic - Tac - Toe</h1></div>
+    <div class="container">
+        <div class="game">
+            <div class="grid">
+                <div class="box1"></div>
+                <div class="box1"></div>
+                <div class="box1"></div>
+                <div class="box1"></div>
+                <div class="box1"></div>
+                <div class="box1"></div>
+                <div class="box1"></div>
+                <div class="box1"></div>
+                <div class="box1"></div>
+            </div>
+            <div class="resultbox">
+    
+            </div>
+        </div>
+        <div class="game-description">
+            <p>Tic Tac Toe is a simple two-player game played on a 3×3 grid. Players take turns marking a square with their symbol—X or O. The goal is to be the first to align three of your symbols in a row, column, or diagonal. It’s a quick, strategic game that encourages players to think ahead and block their opponent. Despite its simplicity, it’s a classic that never gets old!</p>
+            <p><br></p><p></p>
+            <p>Player 1 [ <i class="fa-solid fa-x"></i> ]  &emsp;&nbsp;<input type="text" id="player1" placeholder="Enter the name of Player 1"></p>
+            <p>Player 2 [ <i class="fa-regular fa-circle"></i> ]  &emsp;<input type="text" id="player2" placeholder="Enter the name of Player 2"></p>
+            <p><button id="undo" class="button">Undo</button> &nbsp;&nbsp;<button id="reset" class="button">Reset</button>&nbsp;&nbsp;<button id="replay" class="button">Replay</button></p>
+            <div class="replay">
+                <div class="replay-title">
+                    <div><h2>Game Replay</h2></div>
+                    <div><button class="cancelbutton"><i class="fa-solid fa-x"></i></button></div>
+                </div>
+                <div class="game-replay">
+                    
+                    <div class="grid-replay">
+                        <div class="box2"></div>
+                        <div class="box2"></div>
+                        <div class="box2"></div>
+                        <div class="box2"></div>
+                        <div class="box2"></div>
+                        <div class="box2"></div>
+                        <div class="box2"></div>
+                        <div class="box2"></div>
+                        <div class="box2"></div>
+                    </div>
+                    <div class="replay-controls">
+                        <h3>Game Details</h3>
+                        <p class="replay-player-details"></p>
+                        <button class="button" id="replaybutton">Replay&nbsp;&nbsp;<i class="fa-solid fa-play"></i></button>
+                        <button class="button" id="stopbutton">Stop&nbsp;&nbsp;<i class="fa-solid fa-circle-stop"></i></button><br>
+                        <button class="button" id="nextmove">Next&nbsp;&nbsp;<i class="fa-solid fa-forward"></i></button>
+                        <button class="button" id="previousmove">Previous&nbsp;&nbsp;<i class="fa-solid fa-backward"></i></button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        
+    </div>
+    <script src="tic-tac-toe.js">
+
+    </script>
+</body>
+</html>

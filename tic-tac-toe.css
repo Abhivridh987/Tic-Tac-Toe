@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    background-color: black;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    height: 80vh;
+    width: 95vw;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+   
+    padding: 10px;
+    gap:1vw;
+    
+
+}
+.title{
+    font-family: "Smooch Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 50px;
+    color:white;
+    display: flex;
+    border-bottom: 1px solid white;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+}
+.game{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    position: relative;
+    margin-left:2vw ;
+}
+.game-description{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    
+    height: 500px;
+    color:white;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 25px;
+    line-height: 2.5rem;
+}
+.grid{
+    background-color: black;
+    height: 500px;
+    width: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap:5px;
+    padding:1px;
+    border-radius: 20px;
+    
+}
+.box1{
+    
+    transition-duration: 0.5s;
+    background: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Smooch Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    border-radius: 20px;
+    color:antiquewhite;
+}
+.box1:hover{
+    
+    transform: scale(1.05);
+    border: 1px solid black;
+    z-index:1;
+}
+.resultbox{
+    font-family: "Smooch Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 40px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: 
+        translate(-50%,-50%)
+        scale(1);
+    height: 200px;
+    width: 400px;
+    border-radius: 20px;
+    background: aliceblue;
+    transition-duration: 0.5s;
+    display: none;
+    justify-content: flex-end;
+    padding:10px;
+    animation: scale 0.3s linear;
+    text-align: center;
+}
+.resultbox text{
+    text-align: center;
+    font-weight: 800;
+  
+}
+.resultbox span{
+    text-align: center;
+    font-weight: 800;
+    background: linear-gradient(to top left,blue,red,yellow);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color:transparent;
+}
+.fa-regular{
+    color:red;
+    opacity:1;
+    animation: fade 0.3s linear;
+}
+
+.fa-solid{
+    color:green;
+    opacity:1;
+    animation: fade 0.3s linear;
+}
+.fa-play{
+    color: blue;
+}
+input[type="text"]{
+    height: 3.5vh;
+    width: 30vw;
+    border-radius: 20px;
+    border:none;
+    padding: 10px;
+    margin-top: 1.5vh;
+    font-family: "Smooch Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 25px;
+    background-color: rgba(250, 235, 215, 0.271);
+    color:white;
+}
+.button{
+    padding:10px;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    border-radius:20px;
+    border:none;
+    margin-top: 1.5vh;
+    background: rgba(128, 128, 128, 0.222);
+}
+.button:hover{
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+    background:linear-gradient(to top left,red,yellow);
+}
+.okbutton{
+    padding:10px;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    border-radius:20px;
+    border:none;
+    margin-top: 1.5vh;
+    background: whitesmoke;
+    border: 1px solid black;
+}
+.okbutton:hover{
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+    background:linear-gradient(to top left,red,yellow);
+}
+
+.replay{
+    display: none;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: white;
+    height: 420px;
+    width: 700px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    justify-content: center;
+    align-items: center;
+    box-shadow: -2px 2px 8px black;
+    gap:1vw;
+    border-radius: 20px;
+    
+}
+.game-replay{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    
+    width: 700px;
+    height: 200px;
+    gap:10px;
+}
+.replay-title{
+    color:black;
+    display: flex;
+    width: 100%;
+    border-bottom:1px solid black ;
+    background: white;
+    border-radius: inherit;
+}
+.replay-title div h2{
+    align-items: flex-end;
+    text-align: left;
+    margin: 10px;
+    margin-left: 33px;
+    border-radius: inherit;
+}
+.replay-title div{
+    
+    width: 100%;
+    text-align: right;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.cancelbutton .fa-solid{
+    color:red;
+    font-size: 25px;
+    margin: 10px;
+}
+
+.cancelbutton{
+    
+    background-color: white;
+    height: 100%;
+    width: 5vw;
+    border: none;
+}
+.cancelbutton:hover{
+    background-color: red;
+    color:white !important;
+    transition-duration: 0.3s;
+    border-radius: 20px;
+}
+.cancelbutton:hover .fa-solid{
+    color:white;
+    transition-duration: 0.3s;
+}
+.replay-controls{
+    
+    color:black;
+    height: 300px;
+    border-radius: inherit;
+    flex-grow: 1;
+}
+.grid-replay{
+    background-color: white;
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap:5px;
+    padding:1px;
+    border-radius: 20px;
+    margin-left: 2vw;
+    flex-grow:1.5;
+    
+    height: 300px;
+    border-radius: inherit;
+
+        
+    
+}
+.box2{
+    
+    transition-duration: 0.5s;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Smooch Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    border-radius: 20px;
+    color:antiquewhite;
+}
+.box2:hover{
+    
+    transform: scale(1.05);
+    border: 1px solid black;
+    z-index:1;
+}
+.fa-circle-stop{
+    color:red;
+}
+.fa-forward{
+    color:green;
+}
+.fa-backward{
+    color:brown;
+}
+@keyframes fade{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes scale{
+    0%{
+        transform:
+            translate(-50%,-50%) 
+            scale(0);
+    }
+    100%{
+        transform: 
+            translate(-50%,-50%)
+            scale(1);
+    }
+}
+
+@media (max-width:700px){
+    .title{
+        font-size: 30px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+        position: relative;
+        top:20vh;
+    }
+    .game-description{
+        font-size: 20px;
+        margin-right: 8px;
+    }
+    .game{
+        position: relative;
+        top:20vh;
+    }
+    .grid{
+        height: 300px;
+        width: 300px;
+        position: relative;
+        left:-5vw;
+    }
+    input[type="text"]{
+        height: 3vh;
+        width: 50vw;
+        font-size: 20px;
+    }
+    .replay{
+        flex-direction: column;
+        width: 90vw;
+       
+        margin-left: -5px;
+    }
+    .game-replay{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .grid-replay{
+        height: 50vh;
+        width: 50vw;
+        flex-grow: 2;
+        
+    }
+    .replay-controls{
+        flex-grow: 1;
+    }
+    .replay-title div h2{
+        text-align: right;
+       
+       font-size: 20px;
+       margin-left: -20px;
+    }
+    .cancelbutton{
+    
+        background-color: white;
+        height: 100%;
+        width: 17vw;
+        border: none;
+    }
+    
+}
+@media (min-width:700px) and (max-width:1100px){
+    .title{
+        font-size: 30px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+        position: relative;
+        top:20vh;
+    }
+    .game-description{
+        font-size: 20px;
+        margin-right: 8px;
+    }
+    .game{
+        position: relative;
+        top:0vh;
+    }
+    .grid{
+        height: 400px;
+        width: 400px;
+        position: relative;
+        left:-5vw;
+    }
+    input[type="text"]{
+        height: 3vh;
+        width: 50vw;
+        font-size: 20px;
+    }
+}
+@media (min-width:1100px) and (max-width:1195px){
+    .grid{
+        height: 400px;
+        width: 400px;
+        position: relative;
+        left:0vw;
+        top:-5vh;
+    }
+    .game-description{
+        font-size: 20px;
+        line-height: 5vh;
+    }
+}
